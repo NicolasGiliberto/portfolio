@@ -2,21 +2,23 @@ import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
   const projects = [
-    {
-      title: "Mon premier projet",
-      description: "Un petit projet pour tester React et Tailwind.",
-      tech: ["React", "TailwindCSS"],
-      link: "#",
-      github: "#",
-    },
-    {
-      title: "Portfolio",
-      description: "Le site que tu es en train de construire.",
-      tech: ["React", "Vite", "TailwindCSS"],
-      link: "#",
-      github: "#",
-    },
-  ];
+  {
+    title: "Mon premier projet",
+    description: "Un petit projet pour tester React et Tailwind.",
+    tech: ["React", "TailwindCSS"],
+    link: "#",
+    github: "#",
+    image: "/images/projet1.png", // mets ton image dans /public/images/
+  },
+  {
+    title: "Portfolio",
+    description: "Le site que tu es en train de construire.",
+    tech: ["React", "Vite", "TailwindCSS"],
+    link: "#",
+    github: "#",
+    image: "/images/portfolio.png",
+  },
+];
 
   return (
     <section className="min-h-screen px-6 py-20 bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">

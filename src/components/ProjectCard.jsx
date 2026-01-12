@@ -1,6 +1,16 @@
-export default function ProjectCard({ title, description, tech, link, github }) {
+export default function ProjectCard({ title, description, tech, link, github, image }) {
   return (
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+      
+      {/* Image */}
+      {image && (
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-40 object-cover rounded-md mb-4"
+        />
+      )}
+
       {/* Titre */}
       <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">
         {title}
