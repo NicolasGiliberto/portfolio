@@ -4,73 +4,79 @@ import { useEffect, useState } from "react";
 export default function Navbar() {
   const [dark, setDark] = useState(false);
 
+  // Charger le thème au démarrage
   useEffect(() => {
-  const saved = localStorage.getItem("theme");
-  if (saved === "dark") {
-    setDark(true);
-    document.documentElement.classList.add("dark");
-  }
-}, []);
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") {
+      setDark(true);
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
 
-useEffect(() => {
-  if (dark) {
-    document.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-  }
-}, [dark]);
+  // Appliquer le thème
+  useEffect(() => {
+    if (dark) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [dark]);
 
   return (
-    <nav className="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-4 bg-white dark:bg-gray-800 shadow z-50">
-      <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">Mon Portfolio</h2>
+    <nav className="
+      fixed top-0 left-0 w-full z-50
+      backdrop-blur-md bg-white/70 dark:bg-gray-800/70
+      shadow-sm border-b border-gray-200/50 dark:border-gray-700/50
+      px-8 py-4 flex justify-between items-center
+      transition-colors duration-300
+    ">
+      {/* Logo */}
+      <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 tracking-wide">
+        Mon Portfolio
+      </h2>
 
-      <ul className="flex gap-6">
-        <li>
-          <Link
-            to="/"
-            className="hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-300"
-          >
-            Accueil
-          </Link>
-        </li>
-
-        <li>
-          <Link
-            to="/projects"
-            className="hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-300"
-          >
-            Projets
-          </Link>
-        </li>
-
-        <li>
-          <Link
-            to="/about"
-            className="hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-300"
-          >
-            À propos
-          </Link>
-        </li>
-
-        <li>
-          <Link
-            to="/contact"
-            className="hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-300"
-          >
-            Contact
-          </Link>
-        </li>
+      {/* Liens */}
+      <ul className="flex gap-8 text-lg">
+        {[
+          { to: "/", label: "Accueil" },
+          { to: "/projects", label: "Projets" },
+          { to: "/about", label: "À propos" },
+          { to: "/contact", label: "Contact" },
+        ].map((item, i) => (
+          <li key={i}>
+            <Link
+              to={item.to}
+              className="
+                text-gray-700 dark:text-gray-200
+                hover:text-blue-600 dark:hover:text-blue-400
+                transition-colors duration-200
+              "
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
       </ul>
 
+      {/* Toggle Dark Mode */}
       <button
-  onClick={() => setDark(!dark)}
-  className="ml-6 px-3 py-1 rounded border transition-all duration-300 hover:scale-110 dark:hover:bg-gray-700 hover:bg-gray-200"
->
-  {dark ? "☀️" : "🌙"}
-</button>
-      
+        onClick={() => setDark(!dark)}
+        className="
+          ml-6 w-12 h-6 flex items-center rounded-full
+          bg-gray-300 dark:bg-gray-700
+          transition-all duration-300 relative
+        "
+      >
+        <span
+          className={`
+            w-5 h-5 bg-white rounded-full shadow absolute
+            transform transition-all duration-300
+            ${dark ? "translate-x-6" : "translate-x-1"}
+          `}
+        ></span>
+      </button>
     </nav>
   );
 }
