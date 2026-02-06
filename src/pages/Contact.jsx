@@ -13,13 +13,13 @@ export default function Contact() {
       {/* Liens directs */}
       <div className="flex flex-col md:flex-row justify-center gap-6 mb-12 text-lg">
         <a
-          href="mailto:ton-email@example.com"
+          href="mailto:nicogili.giliberto@gmail.com"
           className="text-blue-600 hover:underline"
         >
           📧 Email
         </a>
         <a
-          href="https://github.com/ton-github"
+          href="https://github.com/NicolasGiliberto"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-800 dark:text-gray-200 hover:underline"
@@ -27,7 +27,7 @@ export default function Contact() {
           🐙 GitHub
         </a>
         <a
-          href="https://www.linkedin.com/in/ton-linkedin"
+          href="https://www.linkedin.com/in/nicolas-giliberto-b24aa622a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-700 dark:text-blue-400 hover:underline"
@@ -37,29 +37,45 @@ export default function Contact() {
       </div>
 
       {/* Formulaire */}
-      <form className="flex flex-col gap-4 max-w-md mx-auto text-left">
-        <input
-          type="text"
-          placeholder="Nom"
-          className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <textarea
-          placeholder="Message"
-          rows="4"
-          className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        ></textarea>
-        <button
-          type="submit"
-          className="px-6 py-2 rounded bg-blue-600 text-white font-semibold hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition"
-        >
-          Envoyer
-        </button>
-      </form>
+      <form
+  action="https://formsubmit.co/nicogili.giliberto@gmail.com"
+  method="POST"
+  className="flex flex-col gap-4 max-w-md mx-auto text-left"
+>
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_template" value="table" />
+
+  <input
+    type="text"
+    name="name"
+    placeholder="Nom"
+    required
+    className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Email"
+    required
+    className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+
+  <textarea
+    name="message"
+    placeholder="Message"
+    rows="4"
+    required
+    className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  ></textarea>
+
+  <button
+    type="submit"
+    className="px-6 py-2 rounded bg-blue-600 text-white font-semibold hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition"
+  >
+    Envoyer
+  </button>
+</form>
     </section>
   );
 }
