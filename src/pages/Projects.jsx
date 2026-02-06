@@ -3,19 +3,31 @@ import ProjectCard from "../components/ProjectCard";
 export default function Projects() {
   const projects = [
   {
-    title: "Mon premier projet",
-    description: "Un petit projet pour tester React et Tailwind.",
-    tech: ["React", "TailwindCSS"],
-    link: "#",
-    github: "#",
+    title: "Destin",
+    description: "Projet réalisé en stage où l'objectif était de créer une application mettant en relation les élèves de 3ème et les entreprises dans le cadre de leur stage de une semaine.",
+    tech: ["React Native", "NodeJS", "Javascript"],
+    github: "https://github.com/Arseid/Stage_DUT_Reseau_Social_ReactNative",
     image: "/images/projet1.png", // mets ton image dans /public/images/
   },
   {
+    title: "OlympicFlameRun",
+    description: "Projet réalisé dans le cadre d'un concours BabylonJS, le thème étant les jeux olympiques",
+    tech: ["Javascript", "BabylonJS"],
+    github: "https://github.com/jolyjonathan/-OlympicFlameRun",
+    image: "/images/portfolio.png",
+  },
+   {
+    title: "EshoopA",
+    description: "Projet Android studio, application de e-commerce fictive",
+    tech: ["Java", "HTMLS", "CSS"],
+    github: "https://github.com/jolyjonathan/EshoopA",
+    image: "/images/portfolio.png",
+  },
+  {
     title: "Portfolio",
-    description: "Le site que tu es en train de construire.",
+    description: "Ce site !",
     tech: ["React", "Vite", "TailwindCSS"],
-    link: "#",
-    github: "#",
+    github: "https://github.com/NicolasGiliberto/portfolio",
     image: "/images/portfolio.png",
   },
 ];
