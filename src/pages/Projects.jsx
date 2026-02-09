@@ -7,7 +7,7 @@ export default function Projects() {
     description: "Projet réalisé en stage où l'objectif était de créer une application mettant en relation les élèves de 3ème et les entreprises dans le cadre de leur stage de une semaine.",
     tech: ["React Native", "NodeJS", "Javascript"],
     github: "https://github.com/Arseid/Stage_DUT_Reseau_Social_ReactNative",
-    image: "/images/destin.png", // mets ton image dans /public/images/
+    image: "/images/destin.png", 
   },
   {
     title: "OlympicFlameRun",

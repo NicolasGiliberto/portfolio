@@ -4,7 +4,7 @@ export default function Home() {
       
       {/* Photo */}
       <img
-        src="/profile.jpg" // mets ton image dans /public/profile.jpg
+        src="images/nicolas.png" 
         alt="Photo de Nicolas"
         className="w-32 h-32 rounded-full shadow-lg mb-6 border-4 border-blue-600 dark:border-blue-400"
       />
@@ -14,8 +14,7 @@ export default function Home() {
         Salut, je suis <span className="text-blue-600 dark:text-blue-400">Nicolas</span>
       </h1>
       <p className="text-lg md:text-xl max-w-2xl mb-8 text-gray-600 dark:text-gray-300">
-        Développeur passionné par React, Vite et TailwindCSS.  
-        J’aime créer des interfaces modernes, fluides et élégantes.
+        Développeur web en progression constante, passionné par la création d’interfaces modernes et la découverte de nouvelles technologies. J’aime comprendre, expérimenter et améliorer chaque projet.
       </p>
 
       {/* CTA */}
@@ -40,6 +39,33 @@ export default function Home() {
         <div className="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow">
           <span className="font-bold">💻 JavaScript</span>
         </div>
+          <div className="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow">
+  <span className="font-bold">📱 React Native</span>
+</div>
+
+<div className="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow">
+  <span className="font-bold">📊 Excel</span>
+</div>
+
+<div className="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow">
+  <span className="font-bold">🗄️ SQL</span>
+</div>
+
+<div className="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow">
+  <span className="font-bold">⚙️ VBA</span>
+</div>
+
+<div className="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow">
+  <span className="font-bold">☕ Java</span>
+</div>
+
+<div className="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow">
+  <span className="font-bold">🐍 Python</span>
+</div>
+
+<div className="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 shadow">
+  <span className="font-bold">🟢 Node.js</span>
+</div>
       </div>
     </section>
   );
