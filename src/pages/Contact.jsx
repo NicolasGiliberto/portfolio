@@ -34,6 +34,14 @@ export default function Contact() {
         >
           💼 LinkedIn
         </a>
+        <a
+  href="images/cv.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-700 dark:text-blue-400 hover:underline"
+>
+  📄 Télécharger mon CV
+</a>
       </div>
 
       {/* Formulaire */}
