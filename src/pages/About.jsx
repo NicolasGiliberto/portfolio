@@ -19,10 +19,12 @@ export default function About() {
           <h2 className="text-2xl font-semibold mb-4">Salut, moi c’est Nicolas 👋</h2>
 
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-            Salut, moi c’est Nicolas 👋
-Je suis un développeur web passionné, actuellement en apprentissage, et j’aime créer des interfaces modernes, intuitives et agréables à utiliser. J’aime comprendre comment les choses fonctionnent, construire des projets concrets et progresser un peu plus chaque jour.
-J’ai obtenu un Bac S mention Bien, section européenne, puis j’ai poursuivi mes études en BUT Informatique. Cette formation m’a permis de travailler sur des projets variés, d’apprendre à collaborer en équipe et de développer une vraie rigueur technique.
-On me décrit souvent comme quelqu’un de sérieux, persévérant et assidu. J’aime aller au bout des choses, apprendre en faisant, résoudre des problèmes et transformer des idées en expériences visuelles propres et efficaces.
+Je suis un développeur web passionné, actuellement en apprentissage, et j’aime créer des interfaces modernes, intuitives et agréables à utiliser.<br />
+ J’aime comprendre comment les choses fonctionnent, construire des projets concrets et progresser un peu plus chaque jour.<br />
+J’ai obtenu un Bac S mention Bien, section européenne, puis j’ai poursuivi mes études en BUT Informatique. <br />
+Cette formation m’a permis de travailler sur des projets variés, d’apprendre à collaborer en équipe et de développer une vraie rigueur technique.<br />
+On me décrit souvent comme quelqu’un de sérieux, persévérant et assidu.<br />
+ J’aime aller au bout des choses, apprendre en faisant, résoudre des problèmes et transformer des idées en expériences visuelles propres et efficaces.
 
           </p>
 
